@@ -24,17 +24,15 @@ const caesarCipher = (string, factor) => {
       
       if (isUpperCase(itemStr)){
 
-        // Create the difference incase adding the factor makes it exceed "Z" ASCII code
-        let difference = newValue - 90;
-        // If it exceeds "Z", make it wrap back to "A". Else change the value
-        newValue > 90 ? strArray[index] = 64 + difference : strArray[index] = newValue;
+        let exceeded = (newValue - 90) + 64;
+        // If the newValue exceeds "Z", make it wrap back to "A", or proceed normally
+        newValue > 90 ? strArray[index] = exceeded : strArray[index] = newValue;
 
       } else if (isLowerCase(itemStr)){
 
-        // Create the difference incase adding the factor makes it exceed "z" ASCII code
-        let difference = newValue - 122;
-        // If it exceeds "z", make it wrap back to "a". Else change the value
-        newValue > 122 ? strArray[index] = 96 + difference : strArray[index] = newValue;
+        let exceeded = (newValue - 122) + 96;
+        // If the newValue exceeds "z", make it wrap back to "a", or proceed normally
+        newValue > 122 ? strArray[index] = exceeded : strArray[index] = newValue;
 
       }
       // Change the ASCII code back to its letter representation

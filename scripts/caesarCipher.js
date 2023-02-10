@@ -13,7 +13,7 @@ const caesarCipher = (string, factor) => {
     }
   });
 
-  // Modify each letter's ASCII code to the new factor
+  // Modify each letter's ASCII code to include the new factor
   // Code inside only executes if the current array item is ASCII code
   strArray.forEach((item) => {
     if (isNumber(item)){

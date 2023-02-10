@@ -1,9 +1,9 @@
 const caesarCipher = (string, factor) => {
   // Check arguments
   if (string === "") return "";
-  if (typeof string !== "string") throw new Error("Must enter a string");
+  if (typeof string !== "string") throw new Error("First argument must be a string");
   if (factor > 26 || factor < 0 || typeof factor !== "number") {
-    throw new Error("Must enter a factor between 0 and 26")
+    throw new Error("Second argument must be a number from 0 to 26")
   };
 
   let returnValue = [];

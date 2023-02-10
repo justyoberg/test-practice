@@ -16,6 +16,10 @@ test("Should return 5", () => {
   expect(calculator.divide(20, 4)).toBe(5);
 });
 
+test("Should return 105", () => {
+  expect(calculator.add(5, calculator.multiply(10, calculator.divide(100, 10)))).toBe(105);
+});
+
 test("Should throw errors", () => {
   expect(() => calculator.add("Ffds", [234])).toThrow(Error);
   expect(() => calculator.add(324, "5")).toThrow(Error);

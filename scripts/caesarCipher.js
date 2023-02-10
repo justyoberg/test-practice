@@ -38,7 +38,6 @@ const caesarCipher = (string, factor) => {
         // Apply the factor normally
         returnValue[item] = newValue;
       };
-      
       // Convert the item back to a letter
       returnValue[item] = String.fromCharCode(returnValue[item]);
     }

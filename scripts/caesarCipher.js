@@ -63,9 +63,9 @@ const isLowerCase = letter => {return letter === letter.toLowerCase()};
 const checkArguments = (string, factor) => {
 
   if (typeof string !== "string") {
-    throw new Error("First argument must be a string")
+    throw new Error("First argument must be a string");
   } else if (factor > 26 || factor < 0 || typeof factor !== "number") {
-    throw new Error("Second argument must be a number from 0 to 26")
+    throw new Error("Second argument must be a number from 0 to 26");
   };
 
 };
@@ -73,8 +73,8 @@ const checkArguments = (string, factor) => {
 export default caesarCipher
 
 // OLD CODE //////////////////////////////////////////////////// 
-//
-//const caesarCipher = (string, factor) => {
+
+// const caesarCipher = (string, factor) => {
 //   // Check arguments
 //   if (string === "") return "";
 //   if (typeof string !== "string") throw new Error("First argument must be a string");

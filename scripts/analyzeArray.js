@@ -20,7 +20,7 @@ const analyzeArray = (arr) => {
 const checkArguments = (arr) => {
 
   if (!Array.isArray(arr)) {
-    throw new Error("Must supply a an array");
+    throw new Error("Must supply an array");
   } else if (arr.some((item) => typeof item !== "number")) {
     throw new Error("Array must contain only numbers");
   }
